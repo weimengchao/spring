@@ -22,4 +22,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <modules>
+    <module>eureka</module>
+  </modules>
 </project>
