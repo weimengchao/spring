@@ -1,4 +1,4 @@
-package com.weimengchao.springCloudDemo.eureka;
+package com.weimengchao.springCloudDemo.aService;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
