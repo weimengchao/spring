@@ -5,7 +5,7 @@
   <groupId>com.weimengchao</groupId>
   <artifactId>spring-cloud-demo</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>spring-cloud-demo</name>
   <url>http://maven.apache.org</url>
@@ -22,4 +22,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <modules>
+    <module>eureka</module>
+    <module>a-service</module>
+    <module>b-service</module>
+  </modules>
 </project>
