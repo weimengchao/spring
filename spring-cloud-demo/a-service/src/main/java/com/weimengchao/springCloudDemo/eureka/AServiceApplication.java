@@ -1,4 +1,4 @@
-package com.weimengchao.springCloudDemo;
+package com.weimengchao.springCloudDemo.eureka;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaApplication {
+public class AServiceApplication {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(EurekaApplication.class).web(true).run(args);
+		new SpringApplicationBuilder(AServiceApplication.class).web(true).run(args);
 	}
 }
