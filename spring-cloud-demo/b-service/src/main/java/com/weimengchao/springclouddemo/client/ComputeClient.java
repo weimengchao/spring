@@ -1,5 +1,6 @@
 package com.weimengchao.springclouddemo.client;
 
+import com.weimengchao.springclouddemo.client.hystrix.ComputeClientHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * —————————————————————————————————
  * 2017/2/10       weimengchao    1.0       1.0 Version
  */
-@FeignClient("a-service")
+@FeignClient(value = "a-service", fallback = ComputeClientHystrix.class)
 public interface ComputeClient {
 
     @RequestMapping(value = "/computes/add", method = RequestMethod.GET)
