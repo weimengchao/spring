@@ -1,3 +1,5 @@
+0. eureka:注册中心
 1. a-service提供add服务
-2. 在b-service中定义feign客户端，通过feign客户端调用a-service中的add服务。注意：feign客户端会对请求进行负载均衡。当a-service调用失败时，调用
-feign客户端指定的短路器。
+2. 在b-service中定义feign客户端，通过feign客户端调用a-service中的add服务。注意：feign客户端会对请求进行负载均衡。
+3. 当a-service调用失败时，调用feign客户端指定的短路器。
+4. config:配置中心，使用git存储各应用的配置文件。如:在git的添加a-dev.properties、a-prod.properties，在a-service中通过bootstrap.properties来指定要使用的配置文件。

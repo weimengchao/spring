@@ -27,5 +27,6 @@
     <module>eureka</module>
     <module>a-service</module>
     <module>b-service</module>
+    <module>config</module>
   </modules>
 </project>
