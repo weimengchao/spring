@@ -2,6 +2,7 @@ package com.weimengchao.springCloudDemo.aService.web;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/computes")
 public class ComputeController {
 
+    @Value("${environment}")
+    private String environment;
+
     private final static Logger LOGGER = Logger.getLogger(ComputeController.class);
 
     @Autowired
@@ -31,6 +35,7 @@ public class ComputeController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     private String add(@RequestParam Integer a, @RequestParam Integer b) {
+        LOGGER.info("environment:" + environment);
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a + b;
         LOGGER.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
