@@ -28,5 +28,6 @@
     <module>a-service</module>
     <module>b-service</module>
     <module>config</module>
+    <module>zuul</module>
   </modules>
 </project>
